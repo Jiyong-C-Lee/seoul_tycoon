@@ -1,0 +1,74 @@
+"""게임 상수 정의"""
+
+# 화면
+SCREEN_WIDTH = 1024
+SCREEN_HEIGHT = 768
+FPS = 60
+TITLE = "서울 부동산 타이쿤"
+
+# 맵
+TILE_SIZE = 32
+MAP_WIDTH = 20
+MAP_HEIGHT = 20
+MAP_OFFSET_X = 16
+MAP_OFFSET_Y = 60
+
+# 게임 설정
+INITIAL_CASH = 500_000_000  # 5억원
+SECONDS_PER_MONTH = 3.0
+TOTAL_MONTHS = 360  # 30년
+BANKRUPTCY_LIMIT = -500_000_000  # -5억원
+EVENT_CHANCE = 0.10  # 매월 10%
+TAX_RATE_BUY = 0.01  # 취득세 1%
+TAX_RATE_SELL = 0.02  # 양도세 2%
+MAINTENANCE_RATE = 0.005  # 연간 관리비율 0.5%
+
+# 색상
+COLOR_BG = (40, 44, 52)
+COLOR_WHITE = (255, 255, 255)
+COLOR_BLACK = (0, 0, 0)
+COLOR_GRAY = (128, 128, 128)
+COLOR_DARK_GRAY = (60, 63, 65)
+COLOR_LIGHT_GRAY = (200, 200, 200)
+
+# 지형 색상
+COLOR_LAND = (222, 215, 196)
+COLOR_RIVER = (100, 160, 220)
+COLOR_PARK = (120, 190, 120)
+COLOR_MOUNTAIN = (160, 140, 120)
+
+# 건물 카테고리 색상
+COLOR_RESIDENTIAL = (70, 130, 180)   # 주거 - 파란
+COLOR_COMMERCIAL = (220, 160, 60)    # 상업 - 노란
+COLOR_MIXED = (160, 100, 180)        # 복합 - 보라
+
+# UI 색상
+COLOR_PANEL = (30, 34, 42)
+COLOR_PANEL_BORDER = (60, 65, 75)
+COLOR_BUTTON = (55, 120, 200)
+COLOR_BUTTON_HOVER = (75, 140, 220)
+COLOR_BUTTON_DANGER = (200, 60, 60)
+COLOR_HIGHLIGHT = (255, 220, 50)
+COLOR_PLAYER_BORDER = (50, 205, 50)
+COLOR_POSITIVE = (50, 205, 50)
+COLOR_NEGATIVE = (255, 80, 80)
+COLOR_EVENT_BG = (40, 40, 60, 220)
+
+# 건물 타입 정의: (유형, 카테고리, 기준가 최소, 기준가 최대, 연간 임대수익률)
+BUILDING_TYPES = [
+    ("아파트", "주거", 300_000_000, 800_000_000, 0.03),
+    ("빌라", "주거", 100_000_000, 300_000_000, 0.04),
+    ("편의점", "상업", 50_000_000, 150_000_000, 0.06),
+    ("오피스텔", "복합", 150_000_000, 400_000_000, 0.05),
+    ("상가", "상업", 200_000_000, 600_000_000, 0.055),
+]
+
+# 건물 카테고리 → 색상 매핑
+CATEGORY_COLORS = {
+    "주거": COLOR_RESIDENTIAL,
+    "상업": COLOR_COMMERCIAL,
+    "복합": COLOR_MIXED,
+}
+
+# 폰트
+FONT_NAME = "malgun gothic"
