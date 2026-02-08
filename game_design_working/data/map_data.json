@@ -1,0 +1,915 @@
+{
+    "_comment": "서울 부동산 타이쿤 - 맵 데이터 (선릉/역삼동)",
+    "_version": "1.0.0",
+    "_last_updated": "2026-02-08",
+    "_description": "선릉역 중심 역삼동 맵 (20x20 그리드)",
+    "map": {
+        "name": "역삼동",
+        "district": "강남구",
+        "grid_size": {
+            "width": 20,
+            "height": 20
+        },
+        "description": "선릉역을 중심으로 한 역삼동 일대. 테헤란로 오피스 밀집 지역과 주거 지역 혼재"
+    },
+    "tiles": {
+        "_description": "각 타일의 지형 정보. 좌표는 [x, y] 형식",
+        "_note": "명시되지 않은 타일은 기본값 'empty'",
+        "roads": {
+            "_description": "도로 타일 (테헤란로, 강남대로, 기타 도로)",
+            "teheran_ro": {
+                "name": "테헤란로",
+                "description": "주요 간선도로, 오피스 밀집",
+                "coordinates": [
+                    [
+                        0,
+                        10
+                    ],
+                    [
+                        1,
+                        10
+                    ],
+                    [
+                        2,
+                        10
+                    ],
+                    [
+                        3,
+                        10
+                    ],
+                    [
+                        4,
+                        10
+                    ],
+                    [
+                        5,
+                        10
+                    ],
+                    [
+                        6,
+                        10
+                    ],
+                    [
+                        7,
+                        10
+                    ],
+                    [
+                        8,
+                        10
+                    ],
+                    [
+                        9,
+                        10
+                    ],
+                    [
+                        10,
+                        10
+                    ],
+                    [
+                        11,
+                        10
+                    ],
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        13,
+                        10
+                    ],
+                    [
+                        14,
+                        10
+                    ],
+                    [
+                        15,
+                        10
+                    ],
+                    [
+                        16,
+                        10
+                    ],
+                    [
+                        17,
+                        10
+                    ],
+                    [
+                        18,
+                        10
+                    ],
+                    [
+                        19,
+                        10
+                    ]
+                ]
+            },
+            "gangnam_daero": {
+                "name": "강남대로",
+                "description": "남북 간선도로",
+                "coordinates": [
+                    [
+                        10,
+                        0
+                    ],
+                    [
+                        10,
+                        1
+                    ],
+                    [
+                        10,
+                        2
+                    ],
+                    [
+                        10,
+                        3
+                    ],
+                    [
+                        10,
+                        4
+                    ],
+                    [
+                        10,
+                        5
+                    ],
+                    [
+                        10,
+                        6
+                    ],
+                    [
+                        10,
+                        7
+                    ],
+                    [
+                        10,
+                        8
+                    ],
+                    [
+                        10,
+                        9
+                    ],
+                    [
+                        10,
+                        11
+                    ],
+                    [
+                        10,
+                        12
+                    ],
+                    [
+                        10,
+                        13
+                    ],
+                    [
+                        10,
+                        14
+                    ],
+                    [
+                        10,
+                        15
+                    ],
+                    [
+                        10,
+                        16
+                    ],
+                    [
+                        10,
+                        17
+                    ],
+                    [
+                        10,
+                        18
+                    ],
+                    [
+                        10,
+                        19
+                    ]
+                ]
+            },
+            "local_roads": {
+                "name": "기타 도로",
+                "coordinates": [
+                    [
+                        5,
+                        0
+                    ],
+                    [
+                        5,
+                        1
+                    ],
+                    [
+                        5,
+                        2
+                    ],
+                    [
+                        5,
+                        3
+                    ],
+                    [
+                        5,
+                        4
+                    ],
+                    [
+                        5,
+                        5
+                    ],
+                    [
+                        5,
+                        6
+                    ],
+                    [
+                        5,
+                        7
+                    ],
+                    [
+                        5,
+                        8
+                    ],
+                    [
+                        5,
+                        9
+                    ],
+                    [
+                        15,
+                        0
+                    ],
+                    [
+                        15,
+                        1
+                    ],
+                    [
+                        15,
+                        2
+                    ],
+                    [
+                        15,
+                        3
+                    ],
+                    [
+                        15,
+                        4
+                    ],
+                    [
+                        15,
+                        5
+                    ],
+                    [
+                        15,
+                        6
+                    ],
+                    [
+                        15,
+                        7
+                    ],
+                    [
+                        15,
+                        8
+                    ],
+                    [
+                        15,
+                        9
+                    ],
+                    [
+                        5,
+                        11
+                    ],
+                    [
+                        5,
+                        12
+                    ],
+                    [
+                        5,
+                        13
+                    ],
+                    [
+                        5,
+                        14
+                    ],
+                    [
+                        5,
+                        15
+                    ],
+                    [
+                        15,
+                        11
+                    ],
+                    [
+                        15,
+                        12
+                    ],
+                    [
+                        15,
+                        13
+                    ],
+                    [
+                        15,
+                        14
+                    ],
+                    [
+                        15,
+                        15
+                    ],
+                    [
+                        0,
+                        5
+                    ],
+                    [
+                        1,
+                        5
+                    ],
+                    [
+                        2,
+                        5
+                    ],
+                    [
+                        3,
+                        5
+                    ],
+                    [
+                        4,
+                        5
+                    ],
+                    [
+                        6,
+                        5
+                    ],
+                    [
+                        7,
+                        5
+                    ],
+                    [
+                        8,
+                        5
+                    ],
+                    [
+                        9,
+                        5
+                    ],
+                    [
+                        11,
+                        5
+                    ],
+                    [
+                        12,
+                        5
+                    ],
+                    [
+                        13,
+                        5
+                    ],
+                    [
+                        14,
+                        5
+                    ],
+                    [
+                        16,
+                        5
+                    ],
+                    [
+                        17,
+                        5
+                    ],
+                    [
+                        18,
+                        5
+                    ],
+                    [
+                        19,
+                        5
+                    ],
+                    [
+                        0,
+                        15
+                    ],
+                    [
+                        1,
+                        15
+                    ],
+                    [
+                        2,
+                        15
+                    ],
+                    [
+                        3,
+                        15
+                    ],
+                    [
+                        4,
+                        15
+                    ],
+                    [
+                        6,
+                        15
+                    ],
+                    [
+                        7,
+                        15
+                    ],
+                    [
+                        8,
+                        15
+                    ],
+                    [
+                        9,
+                        15
+                    ],
+                    [
+                        11,
+                        15
+                    ],
+                    [
+                        12,
+                        15
+                    ],
+                    [
+                        13,
+                        15
+                    ],
+                    [
+                        14,
+                        15
+                    ],
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        15
+                    ]
+                ]
+            }
+        },
+        "parks": {
+            "_description": "공원 및 녹지",
+            "seolleung": {
+                "name": "선정릉 (조선왕릉)",
+                "description": "유네스코 세계문화유산, 대형 공원",
+                "coordinates": [
+                    [
+                        16,
+                        1
+                    ],
+                    [
+                        17,
+                        1
+                    ],
+                    [
+                        18,
+                        1
+                    ],
+                    [
+                        19,
+                        1
+                    ],
+                    [
+                        16,
+                        2
+                    ],
+                    [
+                        17,
+                        2
+                    ],
+                    [
+                        18,
+                        2
+                    ],
+                    [
+                        19,
+                        2
+                    ],
+                    [
+                        16,
+                        3
+                    ],
+                    [
+                        17,
+                        3
+                    ],
+                    [
+                        18,
+                        3
+                    ],
+                    [
+                        19,
+                        3
+                    ],
+                    [
+                        16,
+                        4
+                    ],
+                    [
+                        17,
+                        4
+                    ],
+                    [
+                        18,
+                        4
+                    ],
+                    [
+                        19,
+                        4
+                    ],
+                    [
+                        17,
+                        0
+                    ],
+                    [
+                        18,
+                        0
+                    ],
+                    [
+                        19,
+                        0
+                    ]
+                ]
+            }
+        },
+        "public_facilities": {
+            "_description": "관공서 및 공공시설",
+            "district_office": {
+                "name": "역삼동 주민센터",
+                "coordinates": [
+                    [
+                        3,
+                        12
+                    ]
+                ]
+            },
+            "police_station": {
+                "name": "역삼파출소",
+                "coordinates": [
+                    [
+                        7,
+                        13
+                    ]
+                ]
+            }
+        }
+    },
+    "landmarks": {
+        "_description": "주요 랜드마크 위치",
+        "subway_stations": [
+            {
+                "id": "seolleung_station",
+                "name": "선릉역",
+                "lines": [
+                    "2호선",
+                    "분당선"
+                ],
+                "position": [
+                    10,
+                    10
+                ],
+                "influence_radius": 4,
+                "description": "2호선·분당선 환승역, 역세권 효과 반경 200m (4타일)"
+            }
+        ],
+        "parks": [
+            {
+                "id": "seolleung_park",
+                "name": "선정릉",
+                "type": "heritage_site",
+                "area_coordinates": [
+                    [
+                        16,
+                        0
+                    ],
+                    [
+                        17,
+                        0
+                    ],
+                    [
+                        18,
+                        0
+                    ],
+                    [
+                        19,
+                        0
+                    ],
+                    [
+                        16,
+                        1
+                    ],
+                    [
+                        17,
+                        1
+                    ],
+                    [
+                        18,
+                        1
+                    ],
+                    [
+                        19,
+                        1
+                    ],
+                    [
+                        16,
+                        2
+                    ],
+                    [
+                        17,
+                        2
+                    ],
+                    [
+                        18,
+                        2
+                    ],
+                    [
+                        19,
+                        2
+                    ],
+                    [
+                        16,
+                        3
+                    ],
+                    [
+                        17,
+                        3
+                    ],
+                    [
+                        18,
+                        3
+                    ],
+                    [
+                        19,
+                        3
+                    ],
+                    [
+                        16,
+                        4
+                    ],
+                    [
+                        17,
+                        4
+                    ],
+                    [
+                        18,
+                        4
+                    ],
+                    [
+                        19,
+                        4
+                    ]
+                ],
+                "description": "조선 왕릉, 공원 인접 건물에 보너스"
+            }
+        ]
+    },
+    "buildings": {
+        "_description": "게임 시작 시 배치된 건물들",
+        "_total_count": 10,
+        "list": [
+            {
+                "id": "B_001",
+                "name": "선릉 오피스텔 A동",
+                "type": "residential",
+                "grade": "C",
+                "position": [
+                    9,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "subway_nearby",
+                "description": "역세권, 선릉역 1분 거리",
+                "initial_owner": "npc",
+                "for_sale": false
+            },
+            {
+                "id": "B_002",
+                "name": "테헤란 상가",
+                "type": "commercial",
+                "grade": "C",
+                "position": [
+                    9,
+                    11
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "subway_nearby",
+                "description": "역세권, 테헤란로 접면",
+                "initial_owner": "npc",
+                "for_sale": true
+            },
+            {
+                "id": "B_003",
+                "name": "역삼 빌라촌",
+                "type": "residential",
+                "grade": "C",
+                "position": [
+                    2,
+                    3
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "normal",
+                "description": "조용한 주거 지역",
+                "initial_owner": "npc",
+                "for_sale": true
+            },
+            {
+                "id": "B_004",
+                "name": "선릉 비즈니스센터",
+                "type": "office",
+                "grade": "B",
+                "position": [
+                    11,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "subway_nearby",
+                "description": "역세권, 중형 오피스",
+                "initial_owner": "npc",
+                "for_sale": false
+            },
+            {
+                "id": "B_005",
+                "name": "강남 주상복합",
+                "type": "residential",
+                "grade": "B",
+                "position": [
+                    13,
+                    2
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "park_nearby",
+                "description": "선정릉 인접, 쾌적한 주거",
+                "initial_owner": "npc",
+                "for_sale": true
+            },
+            {
+                "id": "B_006",
+                "name": "역삼 골목상권",
+                "type": "commercial",
+                "grade": "C",
+                "position": [
+                    7,
+                    12
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "normal",
+                "description": "주거 밀집 지역 상권",
+                "initial_owner": "npc",
+                "for_sale": true
+            },
+            {
+                "id": "B_007",
+                "name": "테헤란 IT타워",
+                "type": "office",
+                "grade": "A",
+                "position": [
+                    11,
+                    11
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "subway_nearby",
+                "description": "역세권, 테헤란로 오피스",
+                "initial_owner": "npc",
+                "for_sale": false
+            },
+            {
+                "id": "B_008",
+                "name": "역삼 원룸촌",
+                "type": "residential",
+                "grade": "C",
+                "position": [
+                    3,
+                    14
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "normal",
+                "description": "저렴한 원룸 밀집",
+                "initial_owner": "npc",
+                "for_sale": true
+            },
+            {
+                "id": "B_009",
+                "name": "선릉 근린상가",
+                "type": "commercial",
+                "grade": "B",
+                "position": [
+                    12,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "subway_nearby",
+                "description": "역세권, 유동인구 많음",
+                "initial_owner": "npc",
+                "for_sale": false
+            },
+            {
+                "id": "B_010",
+                "name": "역삼 아파트",
+                "type": "residential",
+                "grade": "B",
+                "position": [
+                    7,
+                    3
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "location_type": "normal",
+                "description": "조용한 주거 지역",
+                "initial_owner": "npc",
+                "for_sale": true
+            }
+        ]
+    },
+    "zones": {
+        "_description": "구역별 용도 지정 (참고용)",
+        "office_zone": {
+            "name": "오피스 밀집 구역",
+            "description": "테헤란로 일대, 오피스 건물 위주",
+            "area": "테헤란로(y=10) 주변"
+        },
+        "residential_north": {
+            "name": "북측 주거 지역",
+            "description": "조용한 주거 지역",
+            "area": "y < 10 구역"
+        },
+        "residential_south": {
+            "name": "남측 주거 지역",
+            "description": "역삼동 주거 밀집",
+            "area": "y > 10 구역"
+        },
+        "premium_zone": {
+            "name": "프리미엄 구역",
+            "description": "선정릉 인접, 고급 주거",
+            "area": "x > 15, y < 5"
+        }
+    },
+    "initial_player_building": {
+        "_description": "플레이어 시작 건물 (MVP 고정)",
+        "_note": "game start 시 B_002를 플레이어에게 자동 할당",
+        "building_id": "B_002",
+        "purchase_price": 450000000,
+        "acquisition_tax": 4500000,
+        "total_paid": 454500000,
+        "remaining_cash": 45500000,
+        "description": "상업 C급, 역세권 입지"
+    },
+    "metadata": {
+        "_description": "맵 통계 및 메타 정보",
+        "statistics": {
+            "total_tiles": 400,
+            "road_tiles": 84,
+            "park_tiles": 20,
+            "buildable_tiles": 296,
+            "occupied_tiles": 10,
+            "available_tiles": 286
+        },
+        "building_distribution": {
+            "by_type": {
+                "residential": 5,
+                "commercial": 3,
+                "office": 2
+            },
+            "by_grade": {
+                "C": 6,
+                "B": 3,
+                "A": 1
+            },
+            "by_location": {
+                "subway_nearby": 6,
+                "park_nearby": 1,
+                "normal": 3
+            },
+            "for_sale_count": 6,
+            "player_owned_count": 0
+        }
+    }
+}
