@@ -1,0 +1,184 @@
+{
+    "_comment": "서울 부동산 타이쿤 - 건물 데이터",
+    "_version": "1.0.0",
+    "_last_updated": "2026-02-08",
+    "_description": "건물 타입, 등급, 입지 관련 모든 데이터",
+    "types": {
+        "_description": "건물 타입별 모든 속성",
+        "residential": {
+            "name": "주거",
+            "code": "residential",
+            "description": "오피스텔, 빌라, 아파트",
+            "price": {
+                "base": 800000000,
+                "min": 300000000,
+                "max": 1500000000
+            },
+            "rental_yield": {
+                "annual_min": 0.045,
+                "annual_max": 0.060,
+                "annual_average": 0.0525
+            },
+            "market_reaction": {
+                "volatility": "low",
+                "rising_market_multiplier": 0.8,
+                "falling_market_multiplier": 0.7
+            },
+            "characteristics": {
+                "stability": "high",
+                "growth_potential": "medium",
+                "risk_level": "low"
+            }
+        },
+        "commercial": {
+            "name": "상업",
+            "code": "commercial",
+            "description": "상가, 음식점, 소매점",
+            "price": {
+                "base": 1000000000,
+                "min": 500000000,
+                "max": 2000000000
+            },
+            "rental_yield": {
+                "annual_min": 0.050,
+                "annual_max": 0.070,
+                "annual_average": 0.060
+            },
+            "market_reaction": {
+                "volatility": "medium",
+                "rising_market_multiplier": 1.0,
+                "falling_market_multiplier": 1.0
+            },
+            "characteristics": {
+                "stability": "medium",
+                "growth_potential": "medium",
+                "risk_level": "medium"
+            }
+        },
+        "office": {
+            "name": "오피스",
+            "code": "office",
+            "description": "사무실, 업무용 빌딩",
+            "price": {
+                "base": 2500000000,
+                "min": 1000000000,
+                "max": 5000000000
+            },
+            "rental_yield": {
+                "annual_min": 0.035,
+                "annual_max": 0.050,
+                "annual_average": 0.0425
+            },
+            "market_reaction": {
+                "volatility": "high",
+                "rising_market_multiplier": 1.2,
+                "falling_market_multiplier": 1.3
+            },
+            "characteristics": {
+                "stability": "low",
+                "growth_potential": "high",
+                "risk_level": "high"
+            }
+        }
+    },
+    "grades": {
+        "_description": "건물 등급별 계수 (모든 타입 공통)",
+        "C": {
+            "name": "C급",
+            "coefficient_min": 0.6,
+            "coefficient_max": 0.8,
+            "coefficient_avg": 0.7,
+            "description": "노후 건물, 낮은 층수",
+            "mvp_enabled": true
+        },
+        "B": {
+            "name": "B급",
+            "coefficient_min": 0.9,
+            "coefficient_max": 1.1,
+            "coefficient_avg": 1.0,
+            "description": "일반 건물, 중간 품질",
+            "mvp_enabled": true
+        },
+        "A": {
+            "name": "A급",
+            "coefficient_min": 1.5,
+            "coefficient_max": 2.5,
+            "coefficient_avg": 2.0,
+            "description": "신축, 고급 건물",
+            "mvp_enabled": true
+        },
+        "S": {
+            "name": "S급",
+            "coefficient_min": 3.0,
+            "coefficient_max": 5.0,
+            "coefficient_avg": 4.0,
+            "description": "랜드마크, 프리미엄",
+            "mvp_enabled": false,
+            "phase": "Phase 4+"
+        }
+    },
+    "locations": {
+        "_description": "입지별 계수 및 보너스",
+        "subway_nearby": {
+            "name": "역세권",
+            "description": "지하철역 200m 이내",
+            "price_coefficient_min": 1.2,
+            "price_coefficient_max": 1.4,
+            "price_coefficient_avg": 1.3,
+            "monthly_bonus": 0.005
+        },
+        "park_nearby": {
+            "name": "공원 인접",
+            "description": "공원/녹지 인접",
+            "price_coefficient_min": 1.1,
+            "price_coefficient_max": 1.2,
+            "price_coefficient_avg": 1.15,
+            "monthly_bonus": 0.002
+        },
+        "normal": {
+            "name": "일반",
+            "description": "특별 조건 없음",
+            "price_coefficient_min": 0.9,
+            "price_coefficient_max": 1.1,
+            "price_coefficient_avg": 1.0,
+            "monthly_bonus": 0.0
+        }
+    },
+    "rental": {
+        "_description": "임대료 조정 관련 (Phase 2+)",
+        "mvp_fixed_vacancy": 0.05,
+        "adjustment_high": {
+            "multiplier_min": 1.10,
+            "multiplier_max": 1.20,
+            "vacancy_increase_min": 0.10,
+            "vacancy_increase_max": 0.30
+        },
+        "adjustment_normal": {
+            "multiplier_min": 0.95,
+            "multiplier_max": 1.05,
+            "base_vacancy_min": 0.05,
+            "base_vacancy_max": 0.10
+        },
+        "adjustment_low": {
+            "multiplier_min": 0.80,
+            "multiplier_max": 0.90,
+            "vacancy_decrease_min": 0.0,
+            "vacancy_decrease_max": 0.05
+        }
+    },
+    "remodeling": {
+        "_description": "리모델링 시스템 (Phase 2+)",
+        "cost_ratio": 0.20,
+        "duration_months": 3,
+        "effects": {
+            "durability": 100,
+            "condition_upgrade_levels": 2,
+            "value_increase_min": 0.10,
+            "value_increase_max": 0.20,
+            "rent_increase_min": 0.15,
+            "rent_increase_max": 0.25,
+            "vacancy_decrease_min": 0.05,
+            "vacancy_decrease_max": 0.10
+        }
+    }
+}

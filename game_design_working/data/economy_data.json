@@ -1,0 +1,207 @@
+{
+    "_comment": "서울 부동산 타이쿤 - 경제 시스템 데이터",
+    "_version": "1.0.0",
+    "_last_updated": "2026-02-08",
+    "_description": "시장, 거래, 대출, 이벤트, 게임 설정 등",
+    "market": {
+        "_description": "시장 전체 파라미터",
+        "global_trend": {
+            "initial_value": 0.2,
+            "min": -1.0,
+            "max": 1.0,
+            "monthly_change_min": -0.1,
+            "monthly_change_max": 0.1,
+            "description": "-1.0(대폭락) ~ +1.0(대호황)"
+        },
+        "market_index": {
+            "initial": 100,
+            "description": "시장 지수, 초기값 100"
+        },
+        "base_interest_rate": {
+            "initial": 0.03,
+            "min": 0.01,
+            "max": 0.10,
+            "description": "기준 금리 (연 단위)"
+        }
+    },
+    "price_algorithm": {
+        "_description": "가격 변동 알고리즘 파라미터",
+        "current_price": {
+            "global_trend_scale": 0.03,
+            "random_noise_distribution": "normal",
+            "random_noise_mean": 0.0,
+            "random_noise_std": 0.01,
+            "random_noise_min": -0.02,
+            "random_noise_max": 0.02,
+            "monthly_change_limit_min": -0.05,
+            "monthly_change_limit_max": 0.05
+        },
+        "fair_value": {
+            "global_trend_scale": 0.02,
+            "mean_reversion_strength": 0.2,
+            "description": "Fair Value는 안정적으로 변동, 랜덤 없음"
+        },
+        "npc_listing": {
+            "price_multiplier_min": 0.85,
+            "price_multiplier_max": 1.15,
+            "cheap_probability": 0.30,
+            "fair_probability": 0.40,
+            "expensive_probability": 0.30
+        }
+    },
+    "trading": {
+        "_description": "거래 관련 비용 및 규칙",
+        "costs": {
+            "acquisition_tax_rate": 0.01,
+            "instant_sale_discount": 0.05,
+            "description": "취득세 1%, 즉시 매도 시 5% 할인"
+        },
+        "loan": {
+            "ltv_default": 0.7,
+            "ltv_min": 0.5,
+            "ltv_max": 0.8,
+            "interest_base_rate": 0.03,
+            "credit_score_premium": {
+                "90_100": 0.005,
+                "70_89": 0.010,
+                "50_69": 0.015,
+                "30_49": 0.020,
+                "0_29": 0.030
+            },
+            "repayment_method": "bullet",
+            "monthly_interest_only": true
+        }
+    },
+    "credit_score": {
+        "_description": "신용도 시스템",
+        "initial": 100,
+        "min": 0,
+        "max": 100,
+        "changes": {
+            "normal_payment": 0,
+            "overdue_1_month": -5,
+            "overdue_3_months": -10,
+            "overdue_12_months": "bankruptcy",
+            "full_repayment_bonus": 10
+        }
+    },
+    "game_start": {
+        "_description": "게임 시작 조건",
+        "player": {
+            "initial_cash": 500000000,
+            "initial_debt": 0,
+            "initial_buildings": 1,
+            "start_year": 2004,
+            "start_month": 1
+        },
+        "mvp_fixed_building": {
+            "type": "commercial",
+            "grade": "C",
+            "price": 450000000,
+            "acquisition_tax": 4500000,
+            "total_cost": 454500000,
+            "remaining_cash": 45500000,
+            "monthly_rent_estimate": 2250000
+        }
+    },
+    "win_lose_conditions": {
+        "_description": "승리 및 패배 조건",
+        "bankruptcy": {
+            "net_worth_threshold": -500000000,
+            "consecutive_overdue_months": 12,
+            "description": "순자산 -5억 이하 또는 12개월 연속 이자 연체"
+        },
+        "final_grades": {
+            "S": 100000000000,
+            "A": 50000000000,
+            "B": 10000000000,
+            "C": 5000000000,
+            "D": 1000000000,
+            "E": 100000000,
+            "F": 0,
+            "unit": "원"
+        }
+    },
+    "events": {
+        "_description": "이벤트 발생 파라미터",
+        "monthly_probability": 0.05,
+        "types": {
+            "good_news": {
+                "probability": 0.5,
+                "trend_impact": 0.3,
+                "duration_months": 3,
+                "examples": [
+                    "GTX 건설 확정",
+                    "금리 인하"
+                ]
+            },
+            "bad_news": {
+                "probability": 0.5,
+                "trend_impact": -0.3,
+                "duration_months": 3,
+                "examples": [
+                    "규제 강화",
+                    "금리 인상"
+                ]
+            },
+            "financial_crisis": {
+                "scripted": true,
+                "year": 2008,
+                "month": 9,
+                "trend_impact": -0.6,
+                "duration_months": 12
+            }
+        }
+    },
+    "time": {
+        "_description": "시간 관련 설정",
+        "total_months": 360,
+        "total_years": 30,
+        "game_speed_options": [
+            1,
+            2,
+            4
+        ],
+        "real_time_per_game_day_seconds": 0.167,
+        "description": "1초 = 게임 내 6일"
+    },
+    "growth_targets": {
+        "_description": "30년간 목표 성장 곡선",
+        "5_years": {
+            "annual_growth_min": 0.03,
+            "annual_growth_max": 0.05,
+            "cumulative_growth_min": 0.16,
+            "cumulative_growth_max": 0.28
+        },
+        "10_years": {
+            "annual_growth_min": 0.04,
+            "annual_growth_max": 0.06,
+            "cumulative_growth_min": 0.48,
+            "cumulative_growth_max": 0.79
+        },
+        "20_years": {
+            "annual_growth_min": 0.05,
+            "annual_growth_max": 0.07,
+            "cumulative_growth_min": 1.65,
+            "cumulative_growth_max": 2.87
+        },
+        "30_years": {
+            "annual_growth_min": 0.05,
+            "annual_growth_max": 0.08,
+            "cumulative_growth_min": 3.32,
+            "cumulative_growth_max": 9.06
+        }
+    },
+    "mvp_exclusions": {
+        "_description": "MVP에서 제외되는 기능",
+        "features": [
+            "리모델링 시스템",
+            "임대료 조정 UI",
+            "대출 금액 수동 조절",
+            "등급별 변동 차이",
+            "S급 건물",
+            "복잡한 이벤트 선택지",
+            "양도소득세"
+        ]
+    }
+}
